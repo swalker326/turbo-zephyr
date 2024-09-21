@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import * as rootRoute from "./root";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { Component as RootRoute } from "./root";
+import "./index.css";
 
 const router = createBrowserRouter(
 	[
 		{
-			...rootRoute,
 			id: "root",
 			path: "/",
+			Component: RootRoute,
 			children: [
 				{
-					id: "home",
 					index: true,
 					lazy: () => import("./routes/home"),
 				},
