@@ -1,0 +1,25 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "RSPack",
+	"extends": "./base.json",
+	"compilerOptions": {
+		"moduleResolution": "bundler",
+		"target": "ES2020",
+		"lib": ["DOM", "ES2020"],
+		"module": "ESNext",
+		"jsx": "react-jsx",
+		"strict": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"useDefineForClassFields": true,
+		"allowImportingTsExtensions": true
+	},
+	"include": ["src"],
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
+}
