@@ -20,6 +20,7 @@ export default withZephyr()({
 	},
 	devServer: {
 		historyApiFallback: true,
+		port: 3000,
 	},
 	module: {
 		rules: [
@@ -76,6 +77,11 @@ export default withZephyr()({
 				react: {
 					eager: true,
 					requiredVersion: dependencies.react,
+					singleton: true,
+				},
+				"@radix-ui/react-icons": {
+					eager: true,
+					requiredVersion: dependencies["@radix-ui/react-icons"],
 					singleton: true,
 				},
 				"react-dom": {
